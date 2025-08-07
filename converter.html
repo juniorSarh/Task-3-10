@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConverterHub</title>
+    <link rel="stylesheet" href="converter.css">
+</head>
+<body>
+    
+  <h1>Converter Hub</h1>
+  <div class="tabs">
+    <button class="tab-button active" onclick="switchTab('file')">File Transfer</button>
+    <button class="tab-button" onclick="switchTab('temp')">Temperature</button>
+    <button class="tab-button" onclick="switchTab('sci')">Scientific Notation</button>
+    <button class="tab-button" onclick="switchTab('metric')">Metric Prefix</button>
+  </div>
+
+  <div id="file" class="converter active">
+  <label>Select File Size Unit</label>
+  <select id="fileSize">
+    <option value="GB">GigaByte (GB)</option>
+    <option value="MB">MegaByte (MB)</option>
+    <option value="KB">KiloByte (KB)</option>
+  </select>
+
+  <label>Enter File Size Value</label>
+  <input type="number" id="value" placeholder="enter a number">
+
+  <label>Select Speed Unit</label>
+  <select id="SpeedSize">
+    <option value="Gbps">Gigabits per second (Gbps)</option>
+    <option value="Mbps">Megabits per second (Mbps)</option>
+    <option value="Kbps">Kilobits per second (Kbps)</option>
+  </select>
+
+  <label>Enter Speed</label>
+  <input type="number" id="speed" placeholder="enter a number">
+
+  <button id="calculateBtn">Calculate</button>
+  <p id="estimated-time"></p>
+</div>
+
+
+  <div id="temp" class="converter">
+    <label>Temperature (Celsius)</label>
+    <input type="number" id="celsius">
+    <button onclick="convertTemp()">Convert</button>
+    <p id="tempResult"></p>
+  </div>
+
+  <div id="sci" class="converter">
+    <label>Number</label>
+    <input type="number" id="normalNum">
+    <button onclick="convertToScientific()">Convert</button>
+    <p id="sciResult"></p>
+  </div>
+
+  <div id="metric" class="converter">
+    <label>Value</label>
+    <input type="number" id="metricVal">
+    <label>From</label>
+    <select id="fromUnit">
+        <option value="10000000000000">Tera</option>
+        <option value="1000000000">Giga</option>
+      <option value="1000000">Mega</option>
+      <option value="1000">Kilo</option>
+      <option value="1">Base</option>
+      <option value="0.001">Milli</option>
+      <option value="0.0000001">Micro</option>
+    </select>
+    <label>To</label>
+    <select id="toUnit">
+    <option value="10000000000000">Tera</option>
+      <option value="1000000000">Giga</option>
+      <option value="1000000">Mega</option>
+      <option value="1000">Kilo</option>
+      <option value="1">Base</option>
+      <option value="0.001">Milli</option>
+      <option value="0.0000001">Micro</option>
+    </select>
+    <button onclick="convertMetric()">Convert</button>
+    <p id="metricResult"></p>
+  </div>
+  <script src="conveter.js"></script>
+</body>
+</html>

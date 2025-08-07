@@ -1,0 +1,52 @@
+ body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      background: #b6dedb;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .tabs {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .tab-button {
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      background: #ccc;
+      margin-right: 5px;
+    }
+
+    .tab-button.active {
+      background: #007bff;
+      color: #fff;
+    }
+
+    .converter {
+      display: none;
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .converter.active {
+      display: block;
+    }
+
+    label, input, select, button {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+    }
