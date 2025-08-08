@@ -19,6 +19,7 @@
       background: white;
     }
 
+header{
     .navbar {
   display: flex;
   justify-content: space-between;
@@ -81,7 +82,7 @@
   .menu-toggle {
     display: block;
   }
-}
+}}
 
     h1 {
       margin-bottom: 20px;
